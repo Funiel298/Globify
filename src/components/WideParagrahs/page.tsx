@@ -3,7 +3,7 @@ export default function WideParagraphs(){
     return(
         <div className="flex flex-row items-center justify-around min-w-full  m-5 ">
             
-            <div className="flex flex-col justify-between h-full  items-start w-1/2 p-5">
+            <div className="flex flex-col justify-between h-full  items-start w-1/2 p-5 pb-7 pt-10">
                 <h1 className="font-semibold mb-[1vw] text-5xl">Norway</h1>
                 <h4 className="text-xl w-full">
                     Norway - formally the Kingdom of Norway,

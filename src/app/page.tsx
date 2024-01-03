@@ -2,12 +2,43 @@ import Image from 'next/image';
 import norwayImage from '../images/oslo-city-norway-uhd-4k-wallpaper.jpg';
 import { FaArrowRight } from 'react-icons/fa6'
 import Header from '@/components/Header/page';
-import Scroll from '@/components/Scroll/page';
+import Scroll from '@/components/VerticalScroll/page';
 import CenterParagraphs from '@/components/CenterParagraphs/page';
 import WideParagraphs from '@/components/WideParagrahs/page';
+import Footer from '@/components/Footer/page';
+import Card from '@/components/Card/page';
 
 
 export default function Home() {
+
+  let sources = [
+    {
+        link : 'https://www.youtube.com/embed/bAGhXcYc0o4',
+        name : 'Geography Now! NORWAY',
+        description : 'Ahhh the land of the ....never ending and / or never rising sun.',
+        image: '../images/mainPage/geographynow_norway.jpg'
+    },
+    {
+        link : 'https://www.youtube.com/embed/CxwJrzEdw1U',
+        name : 'Norway 4K - Scenic Relaxation Film with Calming Music',
+        description : `Norway is one of the most scenic countries in the world. Enjoy this 4K relaxation film across the Norway's most beautiful regions. From the endless Fjords to the stunning Lofoten Islands, Norway's landscapes have so much to offer. `,
+        image: '../images/mainPage/geographynow_norway.jpg'
+      },
+    {
+        link : 'https://www.youtube.com/embed/zyZAMR56mXY',
+        name : 'Норвегия. Богатая и очень красивая. Большой Выпуск.',
+        description : 'Съемка, монтаж и все остальное : ВСЕ САМ.',
+        image: '../images/mainPage/geographynow_norway.jpg'
+        
+    },
+    {
+        link : 'https://www.youtube.com/embed/c3suauAz0zQ',
+        name : 'nordic home office ~ chill lofi beats',
+        description : 'Cozy Nordic is an independent little channel, with the aim of creating cozy little moments for everyone to enjoy, whether you need to calm down or concentrate. The music and animations are made by myself, as I personally think that it creates a more whole experience. ',
+        image: '../images/mainPage/geographynow_norway.jpg'
+    },
+]
+
   return (
     <div >
       <Header/>
@@ -33,7 +64,7 @@ export default function Home() {
         </div>
 
 
-        <Scroll/>
+        <Scroll sources={sources} sign={'Play'} />
       </div> 
 
       <div className='flex justify-center'>
@@ -41,21 +72,15 @@ export default function Home() {
       <div className='flex flex-col justify-center items-center'>
         <WideParagraphs></WideParagraphs>
 
+        <Card></Card>
 
-        <CenterParagraphs name={'Important Note'}>
-          <h5>
-            It is really important text<br/> Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-            Random highlights: made short films, worked on self-driving cars as a deep learning researcher, made products for gamers from my bedroom that gathered over 1M users, built 2 ML companies (one acquired by Niantic and the other by Riot Games),
-            <br/> founded an online school for kids and streamed 2,000,000+ minutes of content per week + had 100,000+ kids on it, and pivoted it to buildspace -- went through Y-Combinator and recently raised $10M from a16z.
-          </h5>  
-          
-        </CenterParagraphs>
+        
 
         <CenterParagraphs name={'General Data'}>
           <div className='flex flex-row justify-between w-full '>
             <div>
               <h5>Population: 5mln</h5>  
-              <h5>Population: 5mln</h5>  
+              <h5>GDP: 580 billions</h5>  
             </div>
             <div>
               <h5>Population: 5mln</h5>  
@@ -68,9 +93,12 @@ export default function Home() {
           </div>
           
         </CenterParagraphs>
+
+        <Footer/>
         </div>
       </div>
 
+      
 
     </div>
     
