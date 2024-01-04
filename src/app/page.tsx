@@ -55,12 +55,14 @@ export default function Home() {
         
         <div className='absolute top-1/3 mt-10 left-1/3 transform p-3 -translate-x-2/3 -translate-y-1/3 text-blue  text-start '>
           <h1 className='text-[12vw] opacity-60 font-bold'>Norway</h1>
-          <button className='m-[1.25vw] mt-[-2vw] p-[1vw] text-[1vw] text-white absolute border-white border-solid border-2  hover:bg-white hover:text-black duration-300 flex items-center '>
-            <span className='mr-2'>
-              Explore
-            </span> 
-            <FaArrowRight/>
-          </button>
+          <a href="#cards" className='group '>
+            <button className='m-[1.25vw] mt-[-2vw] p-[1vw] text-[1vw] text-white absolute border-white border-solid border-2  group-hover:bg-white group-hover:text-black duration-300 flex items-center '>
+              <span className='mr-2 '>
+                Explore
+              </span> 
+              <FaArrowRight className="group-hover:rotate-90 duration-150" />
+            </button>
+          </a>
         </div>
 
 
@@ -77,7 +79,7 @@ export default function Home() {
         
 
         <CenterParagraphs name={'General Data'}>
-          <div className='flex flex-row justify-between w-full '>
+          <div className='flex flex-row justify-between w-full ' id='cards'>
             <div>
               <h5>Population: 5mln</h5>  
               <h5>GDP: 580 billions</h5>  
