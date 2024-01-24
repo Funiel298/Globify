@@ -1,7 +1,7 @@
 'use client'
-import VerticalScroll from "@/components/VerticalScroll/page"
+import VerticalScroll from "@/components/VerticalScroll"
 import { useState } from "react"
-import Pager from "@/components/Pager/page"
+import Pager from "@/components/Pager"
 
 export default function Travel(){
 

@@ -16,7 +16,8 @@ export default function VerticalScroll({sources, sign, SetState}: any){
     
 
     return(
-        <div className='absolute w-[35%]  left-[65%] p-5 h-screen  '>
+        <div className='absolute w-1/3  left-[66vw] top-1/2 p-5 h-1/2 bg-[#0F0F0F] '>
+            <h1 className='text-white font-semibold text-xl'>Useful videos</h1>
             <Swiper
                 scrollbar={{
                     draggable: true,
@@ -24,23 +25,22 @@ export default function VerticalScroll({sources, sign, SetState}: any){
                 }}
                 navigation={true}
                 direction={'vertical'}
-                slidesPerView={3}
+                slidesPerView={2}
                 mousewheel={true}
-                spaceBetween={20}
+                spaceBetween={10}
                 modules={[Scrollbar, Navigation, Mousewheel]}
-                className="h-[99%] "
             >
                 {sources.map((s : any)=>(
                     <SwiperSlide>
-                        <div className='bg-white w-full h-full flex flex-row'>
-                        <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>SetState(s?.id-1)}>
-                            <img src={s.image} alt="" className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
-                            <a href={s.link}>
-                                <button className="absolute bottom-0  right-0 p-3 bg-white text-xs font-medium text-black transition-all duration-300 ease-in-out transform group-hover:bg-black group-hover:text-white">
-                                {sign}
-                                </button>
-                            </a>
-                        </div>
+                        <div className='bg-white w-full  flex flex-row'>
+                            <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>SetState(s?.id-1)}>
+                                <img src={s.image} alt="" className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
+                                <a href={s.link}>
+                                    <button className="absolute bottom-0  right-0 p-3  text-xs font-medium text-white transition-all duration-300 ease-in-out transform group-hover:bg-black group-hover:text-white">
+                                    {sign}
+                                    </button>
+                                </a>
+                            </div>
 
 
 

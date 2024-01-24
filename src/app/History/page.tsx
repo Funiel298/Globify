@@ -1,4 +1,4 @@
-import CenterParagraphs from "@/components/CenterParagraphs/page"
+import CenterParagraphs from "@/components/CenterParagraphs"
 
 export default function History(){
     return(
