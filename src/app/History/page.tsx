@@ -1,6 +1,36 @@
 import CenterParagraphs from "@/components/CenterParagraphs"
 
 export default function History(){
+
+
+    const text = [
+        {
+            title: 'A Brief History of Norway',
+            desc: 'One of the best parts about going on a Norway cruise is all of the rich history and culture you get to experience firsthand. Before you even head out on your trip, take the opportunity to learn a bit about this destination`s history to further appreciate where you are. Here`s a brief history of Norway:',
+            bg_image: '',  
+            image: ''
+        },
+        {
+            title: 'Norway`s beginnings',
+            desc: `People began settling in Norway very early - in 9000 BC, in fact. This was after the end of the first ice age, so it was now an inhabitable location. Settlers survived by hunting and fishing animals such as seal, deer, elk and whales. Farming didn't become prominent until 500 BC, which was known as the bronze age. This time period got its name from the various weapons and jewelry created.`,
+            bg_image: '',  
+            image: '' 
+            
+        },
+        {
+            title: '',
+            desc: ``,
+            bg_image: '',   
+            image: ''
+        },
+        {
+            title: '',
+            desc: ``,
+            bg_image: '',  
+            image: '' 
+        },
+    ]
+
     return(
 
         <div>
@@ -9,14 +39,7 @@ export default function History(){
                 
                 <CenterParagraphs name={'A Brief History of Norway'}>
                     <h5>
-                        <span className="font-semibold">
-                            One of the best parts about going on a Norway cruise is all of the rich history and culture you get to experience firsthand.
-                            </span>
-                            <br /><br /><br />
-                        Before you even head out on your trip, take the opportunity to learn a bit about this destination's history to further appreciate where you are. Here's a brief history of Norway:
-
                         
-                        <br /><br />
                         <span className='font-semibold text-lg'>Norway's beginnings</span><br /><br />
                         People began settling in Norway very early - in 9000 BC, in fact. This was after the end of the first ice age, so it was now an inhabitable location. Settlers survived by hunting and fishing animals such as seal, deer, elk and whales. Farming didn't become prominent until 500 BC, which was known as the bronze age. This time period got its name from the various weapons and jewelry created.
                         <br /><br />

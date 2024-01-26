@@ -1,5 +1,5 @@
 'use client'
-import VerticalScroll from "@/components/VerticalScroll"
+import Scroll from "@/components/Scroll";
 import { useState } from "react"
 import Pager from "@/components/Pager"
 
@@ -194,11 +194,9 @@ export default function Travel(){
     let [city, setCity] = useState(0)
 
     return(
-        <div>
-            <VerticalScroll sources={cities} sign={"Learn More"} SetState={setCity} />
-            <Pager id={city} sources={cities}>
-
-            </Pager>
+        <div className="flex flex-row-reverse">
+            <Scroll sources={cities} sign={"Learn More"} SetState={setCity} />
+            <Pager id={city} sources={cities}/>
         </div>
     )
 }

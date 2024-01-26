@@ -1,92 +1,70 @@
+'use client'
 import Image from 'next/image';
 import darkNorway from '../images/dark_norway.jpg'
-import { FaArrowRight } from 'react-icons/fa6'
 import Header from '@/components/Header';
-import Scroll from '@/components/VerticalScroll';
+import VerticalScroll from '@/components/VerticalScroll';
 import CenterParagraphs from '@/components/CenterParagraphs';
 import WideParagraphs from '@/components/WideParagrahs';
 import Footer from '@/components/Footer';
 import Card from '@/components/Card';
-
+import { motion } from 'framer-motion';
 
 export default function Home() {
 
-  let sources = [
-    {
-        link : 'https://www.youtube.com/embed/bAGhXcYc0o4',
-        name : 'Geography Now! NORWAY',
-        description : 'Ahhh the land of the ....never ending and / or never rising sun.',
-        image: '../images/mainPage/geographynow_norway.jpg'
-    },
-    {
-        link : 'https://www.youtube.com/embed/CxwJrzEdw1U',
-        name : 'Norway 4K - Scenic Relaxation Film with Calming Music',
-        description : `Norway is one of the most scenic countries in the world. Enjoy this 4K relaxation film across the Norway's most beautiful regions. From the endless Fjords to the stunning Lofoten Islands, Norway's landscapes have so much to offer. `,
-        image: '../images/mainPage/geographynow_norway.jpg'
-      },
-    {
-        link : 'https://www.youtube.com/embed/zyZAMR56mXY',
-        name : 'Норвегия. Богатая и очень красивая. Большой Выпуск.',
-        description : 'Съемка, монтаж и все остальное : ВСЕ САМ.',
-        image: '../images/mainPage/geographynow_norway.jpg'
-        
-    },
-    {
-        link : 'https://www.youtube.com/embed/c3suauAz0zQ',
-        name : 'nordic home office ~ chill lofi beats',
-        description : 'Cozy Nordic is an independent little channel, with the aim of creating cozy little moments for everyone to enjoy, whether you need to calm down or concentrate. The music and animations are made by myself, as I personally think that it creates a more whole experience. ',
-        image: '../images/mainPage/geographynow_norway.jpg'
-    },
-]
+
 
   return (
     <div >
-      <Header/>
+      <Header />
       <div className="relative h-screen overflow-hidden">
-        
         <Image
           src={darkNorway}
           alt="Norway"
           layout="fill"
           objectFit="cover"
           className="opacity-90 z-1 object-top"
+          loading="lazy" 
         />
-        
-        
-        <div className='absolute text-white top-1/3  transform   text-start '>
-          <h1 className='text-[12vw] font-bold'>Norway</h1>
-          <h6 className='w-1/2'>Norway, one of the best countries in the world if you consider only quality of life to live here i think you will like it</h6>
+        <div className="absolute text-white top-1/3 transform text-start flex justify-center items-start flex-col p-5">
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[12vw] font-bold m-0"
+          >
+            Norway
+          </motion.h1>
+          <motion.h6
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+            className="w-1/2 p-3 m-0"
+          >
+            Norway, one of the best countries in the world. If you consider only quality of life to live here, I think you will like it.
+          </motion.h6>
         </div>
-
-
-        <Scroll sources={sources} sign={'Play'} />
-      </div> 
+        <VerticalScroll sign={'Play'} />
+      </div>
 
       <div className='flex justify-center'>
 
       <div className='flex flex-col justify-center items-center'>
-        <WideParagraphs></WideParagraphs>
+        
+        <WideParagraphs/>
 
-        <Card></Card>
+        <Card/>
 
         
 
         <CenterParagraphs name={'General Data'}>
-          <div className='flex flex-row justify-between w-full ' id='cards'>
-            <div>
-              <h5>Population: 5mln</h5>  
-              <h5>GDP: 580 billions</h5>  
-            </div>
-            <div>
-              <h5>Population: 5mln</h5>  
-              <h5>Population: 5mln</h5>  
-            </div>
-            <div>
-              <h5>Population: 5mln</h5>  
-              <h5>Population: 5mln</h5>  
-            </div>
+          <div className='grid sm:grid-cols-3 grid-cols-2 sm:w-full w-screen text-[#212427] mb-5' id='cards'>
+            <h5>Population: 5.4 million</h5>  
+            <h5>GDP: 434 billion USD</h5>  
+            <h5>Area: 148,729 sq km</h5>
+            <h5>Capital: Oslo</h5>
+            <h5>Life Expectancy: 83 years</h5>  
+            <h5>Official Language: Norwegian</h5>  
           </div>
-          
         </CenterParagraphs>
 
         <Footer/>

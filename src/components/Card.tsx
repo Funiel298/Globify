@@ -23,13 +23,23 @@ export default function Card(){
             desc: 'Learn how life is going in the country!',
             link: '/Culture'
         },
+        {
+            name: 'Culture',
+            desc: 'Learn how life is going in the country!',
+            link: '/Culture'
+        },
+        {
+            name: 'Culture',
+            desc: 'Learn how life is going in the country!',
+            link: '/Culture'
+        },
     ]
 
     return(
-        <div className='flex flex-wrap w-2/3  flex-row justify-center'>
+        <div className='grid sm:grid-cols-3 gap-3 w-full  flex-row justify-center p-3'>
             {arr.map((source)=>(
-                <a href={source.link} className='w-1/2  group p-5'>
-                    <div className="group-hover:border-y-2 ml-[5vw] duration-300 h-full   group-hover:border-black border-white border-y-2  p-5 text-start ">
+                <a href={source.link} className='w-full  group '>
+                    <div className="group-hover:border-y-2 ml-[5vw] duration-300 h-full  group-hover:border-[#212427] border-white border-y-2  p-5 text-start ">
                         <span className="flex flex-row items-center mb-2">
                             <h2 className="font-medium text-2xl mr-1">{source.name}</h2>
                             <FaArrowRight className="group-hover:ml-5 duration-300"/>
