@@ -8,25 +8,15 @@ import Loading from '../../components/Loading'
 export default function Finance() {
   const today = new Date().toISOString().split('T')[0];
 
-  const [loading, setLoading] = useState(true);
   const [numberOfPeople, setNumberOfPeople] = useState<number>(1);
   const [startDate, setStartDate] = useState<string>(today);
   const [endDate, setEndDate] = useState<string>(startDate);
   const [hotelCostPerNight, setHotelCostPerNight] = useState<number>(10);
   const [flightCost, setFlightCost] = useState<number>(0);
 
-  useEffect(() => {
-    // Simulate a delay (you can replace this with your actual data fetching/loading logic)
-    const delay = setTimeout(() => {
-      setLoading(false);
-    }, 2000);
-
-    // Clear the timeout when the component is unmounted or when data fetching is complete
-    return () => clearTimeout(delay);
-  }, []);
+  
 
   useEffect(() => {
-    // Fetch flight information based on the provided parameters
     const fetchFlightCost = async () => {
       try {
         if (startDate && endDate) {
@@ -61,10 +51,7 @@ export default function Finance() {
 
   return (
     <main className="flex flex-row w-screen overflow-hidden ">
-      {loading ? (
-        <Loading/>
-      ) : (
-        <>
+        
           <div className="w-[50vw] p-5 flex flex-col justify-start items-start overflow-x-hidden overflow-y-scroll">
             <div className="flex flex-row mb-4">
               <h1 className="font-semibold text-xl">Number of People:</h1>
@@ -121,13 +108,8 @@ export default function Finance() {
 
 
 
-
-
-          
-        </>
-
         
-      )}
+      
 
 
       

@@ -109,9 +109,11 @@ export default function Government(){
             <section className="flex justify-center flex-col items-center h-screen ">
                 <a href="https://www.regjeringen.no/en/id4/"><img className="w-[15vw] mt-5 h-auto rounded-xl duration-300 hover:scale-105" alt="Norway Governemnt Icon" src={'https://www.africa-newsroom.com/files/large/be9bb20d039eef4'} /></a>
                 <h1 className="font-semibold text-2xl my-3">Political Directions</h1>
-                <div className="flex flex-row w-1/2 justify-between">
+                <div className="flex flex-row w-1/2 h-5 justify-between">
                     {links[0].map((di)=>(
-                        <a className="hover:text-blue-800 duration-300" href={di.link}><button>{di.name}</button></a>
+                        <a key={di.name} className="hover:text-blue-800 hover:border-b-2 border-0 border-blue-800 duration-100" href={di.link}>
+                            {di.name}
+                        </a>
                     ))}    
                 </div> 
 
@@ -140,9 +142,11 @@ export default function Government(){
                     </a>
                 </div>
                 <h1 className="font-semibold text-2xl my-3">Executive branch</h1>
-                <div className="flex flex-row w-1/2 justify-between">
+                <div className="flex flex-row w-1/2 h-5 justify-between">
                     {links[1].map((gov)=>(
-                        <a className="hover:text-blue-800 duration-300" href={gov.link}><button>{gov.name}</button></a>
+                        <a key={gov.name} className="hover:text-blue-800 hover:border-b-2 border-0 border-blue-800 duration-100" href={gov.link}>
+                            {gov.name}
+                        </a>
                     ))}    
                 </div> 
 
@@ -161,38 +165,65 @@ export default function Government(){
             </section>
             
 
-            <section className="flex justify-center flex-col items-center h-screen">
-        <h1 className="font-semibold text-2xl my-3">Political parties and elections</h1>
-        <div className="flex flex-row w-1/2 justify-between">
-          {links[2].map((gov) => (
-            <a className="hover:text-blue-800 duration-300" href={gov.link} key={gov.name}>
-              <button>{gov.name}</button>
-            </a>
-          ))}
-        </div>
-
-        <div className="flex flex-row w-full flex-wrap justify-center items-center">
-          {parties.map((so) => (
-            <div className="flex flex-col m-4" key={so.name}>
-              <div
-                className="party-container"
-                onMouseEnter={() => handlePartyHover(so)}
-                onMouseLeave={handleModalClose}
-              >
-                <img src={so.image_link} alt="" className="w-1/3 object-cover" />
-                <h1 className={`text-[${so.color}]`}>{so.name}</h1>
-              </div>
-              {showModal && selectedParty === so && (
-                <div className="modal">
-                  <p>{so.info}</p>
-                </div>
-              )}
+        <section className="flex justify-center flex-col items-center h-screen">
+            <h1 className="font-semibold text-2xl my-3">Political parties and elections</h1>
+            <img className="w-1/2 my-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Norway_Storting_2021.svg/884px-Norway_Storting_2021.svg.png" alt="Parties currently in Parliament" />
+            <div className="flex flex-row w-1/2 h-5 justify-between">
+            {links[2].map((gov) => (
+                <a className="hover:text-blue-800 hover:border-b-2 border-0 border-blue-800 duration-100" href={gov.link} key={gov.name}>
+                    {gov.name}
+                </a>
+            ))}
             </div>
-          ))}
-        </div>
-      </section>
+
+            <div className="flex flex-row w-full flex-wrap justify-center my-5 items-center">
+            {parties.map((so) => (
+                <div className="flex flex-col m-4 " key={so.name}>
+                    <div
+                        className="w-[10vw] h-[15vh] "
+                        style={{ borderBottomColor: so.color }}
+                        onMouseEnter={() => handlePartyHover(so)}
+                        onMouseLeave={handleModalClose}
+                        >
+                        <img src={so.image_link} alt="" className="w-full h-full object-cover" />
+                        <h1 style={{ borderBottomColor: so.color }} className={`text-[#212427] border-b-4 `}>
+                            {so.name}
+                        </h1>
+                    </div>
+                    {showModal && selectedParty === so && (
+                        <div>
+                        <p>{so.info}</p>
+                        </div>
+                    )}
+                </div>
+            ))}
+            </div>
 
             
+
+        </section>
+
+        <section className="flex justify-center flex-col items-center h-screen">
+
+            <CenterParagraphs>
+                <h1>
+                    Norway conducts its national-level legislative elections through the Storting, the parliament with 169 members serving four-year terms. The election system employs proportional representation in multi-seat constituencies and prohibits the dissolution of the parliament during this term.
+                    <br /><br />
+                    Operating within a multi-party system, Norway sees the presence of numerous parties. No single party typically secures power independently, necessitating collaboration to form coalition governments or minority cabinets.
+                    <br /><br />
+                    <span className="font-semibold">Election Procedure:</span>
+                    <ul className="decoration-dotted">
+                        <li>The voter selects the ballot corresponding to the preferred party/list.</li>
+                        <li>Options to modify lists are available for voters.</li>
+                        <li>The folded ballot ensures confidentiality.</li>
+                        <li>After verification, the voter's stamped ballot is cast in the ballot box, limited to one per election.</li>
+                    </ul>
+                </h1>
+            </CenterParagraphs>
+        
+        </section>
+
+        
         </div>
     )
 }

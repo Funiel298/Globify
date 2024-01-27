@@ -23,20 +23,10 @@ export default function Card(){
             desc: 'Learn how life is going in the country!',
             link: '/Culture'
         },
-        {
-            name: 'Culture',
-            desc: 'Learn how life is going in the country!',
-            link: '/Culture'
-        },
-        {
-            name: 'Culture',
-            desc: 'Learn how life is going in the country!',
-            link: '/Culture'
-        },
     ]
 
     return(
-        <div className='grid sm:grid-cols-3 gap-3 w-full  flex-row justify-center p-3'>
+        <div className='grid sm:grid-cols-2 gap-3 w-2/3  flex-row justify-center p-3'>
             {arr.map((source)=>(
                 <a href={source.link} className='w-full  group '>
                     <div className="group-hover:border-y-2 ml-[5vw] duration-300 h-full  group-hover:border-[#212427] border-white border-y-2  p-5 text-start ">

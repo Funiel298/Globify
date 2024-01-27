@@ -6,7 +6,7 @@ import VerticalScroll from '@/components/VerticalScroll';
 import CenterParagraphs from '@/components/CenterParagraphs';
 import WideParagraphs from '@/components/WideParagrahs';
 import Footer from '@/components/Footer';
-import Card from '@/components/Card';
+import Cards from '@/components/Cards';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
 
 
   return (
-    <div >
+    <div>
       <Header />
       <div className="relative h-screen overflow-hidden">
         <Image
@@ -48,26 +48,32 @@ export default function Home() {
 
       <div className='flex justify-center'>
 
-      <div className='flex flex-col justify-center items-center'>
-        
-        <WideParagraphs/>
+        <div className='flex flex-col justify-center items-center'>
+          
+          <WideParagraphs/>
 
-        <Card/>
+          <Cards/>
 
-        
+          
 
-        <CenterParagraphs name={'General Data'}>
-          <div className='grid sm:grid-cols-3 grid-cols-2 sm:w-full w-screen text-[#212427] mb-5' id='cards'>
-            <h5>Population: 5.4 million</h5>  
-            <h5>GDP: 434 billion USD</h5>  
-            <h5>Area: 148,729 sq km</h5>
-            <h5>Capital: Oslo</h5>
-            <h5>Life Expectancy: 83 years</h5>  
-            <h5>Official Language: Norwegian</h5>  
+          <div className='flex flex-col items-center w-full mt-5'>
+          <h1 className='text-2xl font-semibold mb-3'>General Data</h1>
+          <div className='grid sm:grid-cols-3 grid-cols-2 w-full text-[#212427] mb-5' id='cards'>
+            <div className="flex justify-center flex-col items-center">
+              <h5>Population: 5.4 million</h5>  
+              <h5>GDP: 434 billion USD</h5>  
+            </div>
+            <div className="flex justify-center flex-col  items-center">
+              <h5>Area: 148,729 sq km</h5>
+              <h5>Capital: Oslo</h5>
+            </div>
+            <div className="flex justify-center flex-col  items-center">
+              <h5>Life Expectancy: 83 years</h5>  
+              <h5>Official Language: Norwegian</h5>
+            </div>
           </div>
-        </CenterParagraphs>
+        </div>
 
-        <Footer/>
         </div>
       </div>
 
