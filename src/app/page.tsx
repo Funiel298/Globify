@@ -73,8 +73,12 @@ export default function Home() {
             </div>
           </div>
         </div>
-
+          <h1 className='font-semibold text-2xl mt-5'>Let's count how many money for travel in norway you need!</h1>
+          <a className='p-5 bg-[#212427] text-white rounded-xl ' href="/Finance">Count</a>
         </div>
+
+        
+
       </div>
 
       
