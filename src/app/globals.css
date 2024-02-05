@@ -17,6 +17,10 @@
   object-fit: contain;
 }
 
+html{
+  scroll-behavior: smooth;
+}
+
 .swiper-slide {
   text-align: center;
   font-size: 64px;

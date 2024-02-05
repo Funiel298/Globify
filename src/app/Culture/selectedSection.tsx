@@ -17,6 +17,10 @@ export default function SelectedSection({ selectedSection, setSelectedSection }:
     animate: { opacity: 1, transition: { duration: 0.5 } },
   };
 
+
+
+
+
   return (
     <AnimatePresence>
       {selectedSection && (
@@ -50,7 +54,7 @@ export default function SelectedSection({ selectedSection, setSelectedSection }:
 
               <p className="w-1/2 my-5 text-start">{selectedSection.inner_content}</p>
 
-              <ScrollCards/>
+              <ScrollCards sources={selectedSection.arr}/>
 
               <img src="" alt="" />
 
