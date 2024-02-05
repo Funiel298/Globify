@@ -14,7 +14,7 @@ export default function Card(){
             link: '/Travel'
         },
         {
-            name: 'Politics and government',
+            name: 'Politics and Gov',
             desc: 'Learn and understand a direction of the country of development',
             link: '/Government'
         },

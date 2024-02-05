@@ -4,7 +4,7 @@ export default function Pager({id, sources}:any){
     
     
     return(
-        <div className="w-[65%] flex flex-col p-20 justify-start items-start  overflow-y-scroll h-screen ">
+        <div className="w-[65%] flex flex-col p-10 justify-start items-start  overflow-y-scroll h-screen ">
             <div className="border-b-2 pb-2 border-[#212427] w-full ">
                 <h1 className="font-bold text-3xl">{sources[id].name}</h1>
                 <h3 className="mt-2 font-light text-[1rem]">{sources[id].description}</h3>

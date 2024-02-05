@@ -49,12 +49,11 @@ export default function VerticalScroll({sources, sign}: any){
                     draggable: true,
                     dragSize: 100
                 }}
-                navigation={true}
                 direction={'vertical'}
                 slidesPerView={1.5}
                 mousewheel={true}
                 spaceBetween={20}
-                modules={[Scrollbar, Navigation, Mousewheel]}
+                modules={[Scrollbar, Mousewheel]}
                 className="h-[99%] "
             >
                 {sources.map((s : any)=>(

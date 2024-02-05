@@ -1,40 +1,37 @@
 'use client'
-import React, { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Mousewheel } from 'swiper/modules';
-// Import Swiper styles
+import { Navigation, Mousewheel,Scrollbar } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-
-
-// import required modules
-import { Scrollbar } from 'swiper/modules';
-import { link } from 'fs';
+import 'swiper/css/bundle';
 
 export default function VerticalScroll({sources, sign, SetState}: any){
 
     
 
     return(
-        <div className=' w-[35%]  left-[66%] p-5 h-full  '>
+        <div className=' w-[35%]  left-[66%] p-3 pr-0 h-full overflow-hidden '>
             <Swiper
+                modules={[Scrollbar, Mousewheel]}
+                mousewheel
                 scrollbar={{
                     draggable: true,
                     dragSize: 100
                 }}
-                navigation={true}
                 direction={'vertical'}
-                slidesPerView={3}
-                mousewheel={true}
+                slidesPerView={4}
+                
                 spaceBetween={20}
-                modules={[Scrollbar, Navigation, Mousewheel]}
-                className="h-[99%] "
+                className='h-screen'
+                
             >
                 {sources.map((s : any)=>(
-                    <SwiperSlide>
-                        <div key={s.image} className='bg-white flex flex-row'>
+                    <SwiperSlide key={s.image}>
+                        <div  className='bg-white border-b-2 pb-4 flex flex-row'>
                             <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>SetState(s?.id-1)}>
-                                <img src={`/images/mainPage/${s.image}`} alt="" className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
+                                <img src={s.image} alt="" className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
                                 <a href={s.link} className="absolute bottom-0  right-0 p-3 bg-white text-xs font-medium text-[#212427] transition-all duration-300 ease-in-out transform group-hover:bg-[#212427] group-hover:text-white">
                                     {sign}
                                 </a>
