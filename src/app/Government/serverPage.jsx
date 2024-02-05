@@ -2,6 +2,8 @@
 import CenterParagraphs from "@/components/CenterParagraphs"
 import { useState } from "react";
 import {motion, useScroll, useTransform} from 'framer-motion'
+import Link from "next/link";
+import { FaAngleLeft } from "react-icons/fa6";
 
 export default function Government(){
 
@@ -113,6 +115,9 @@ export default function Government(){
 
     return(
         <div >
+            <Link href={'/'} className='absolute left-5 top-5 hover:left-9 duration-300'>
+                <FaAngleLeft size={30} />
+            </Link>
             <motion.section style={{y : y}} className="flex justify-center flex-col items-center h-screen mb-10 z-10">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Emblem_of_the_Norwegian_Communications_Authority.svg" alt="img" className="absolute -z-20 opacity-30 h-full" />
                 <a href="https://www.regjeringen.no/en/id4/"><img className="w-[15vw] mt-5 h-auto rounded-xl duration-300 hover:scale-105" alt="Norway Governemnt Icon" src={'https://www.africa-newsroom.com/files/large/be9bb20d039eef4'} /></a>

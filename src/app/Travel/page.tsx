@@ -2,8 +2,10 @@
 import Scroll from "@/components/Scroll";
 import { useState } from "react"
 import Pager from "@/components/Pager"
-import { CiCircleChevLeft } from "react-icons/ci";
+import { FaAngleLeft } from "react-icons/fa6";
 import Link from "next/link";
+
+
 export default function Travel(){
 
     let cities = [
@@ -196,11 +198,9 @@ export default function Travel(){
 
     return(
         <div className="flex flex-row-reverse h-screen overflow-hidden">
-            <span  className={'absolute text-2xl pointer opacity-50 left-0 p-2'}>
-              <Link href="/">
-                <CiCircleChevLeft />
-              </Link>
-            </span>
+            <Link href="/" className="absolute text-2xl text-[#050505]  pointer opacity-50 left-0 p-2">
+              <FaAngleLeft size={30} />
+            </Link>
             
             <Scroll sources={cities} sign={"Learn More"} SetState={setCity} />
             <Pager id={city} sources={cities}/>

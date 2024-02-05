@@ -3,6 +3,8 @@ import { motion } from 'framer-motion';
 import { GrLinkNext } from "react-icons/gr";
 import sections from './data';
 import SelectedSection from './selectedSection';
+import { FaAngleLeft } from "react-icons/fa6";
+import Link from 'next/link';
 
 interface Section {
   title: string;
@@ -25,12 +27,15 @@ export default function Culture() {
   };
 
   return (
-    <div className="flex flex-col bg-[#212427] h-screen overflow-hidden">
-      <h1 className="text-3xl font-semibold m-4 p-5 w-full flex justify-center text-white border-white border-[1px] rounded-xl">
+    <div className="flex flex-col justify-center items-center  bg-[#212427] h-screen overflow-hidden">
+      <h1 className="text-2xl font-semibold m-4 p-5 w-[98vw] flex justify-center text-white border-white border-[1px] rounded-xl">
         Discover Norway's Culture
+        <Link href={'/'} className='absolute left-10 hover:left-9 duration-300'>
+          <FaAngleLeft size={30} />
+        </Link>
       </h1>
 
-      <div className="flex flex-col gap-4 overflow-auto">
+      <div className="flex flex-col gap-4 overflow-auto w-[98vw]">
         {sections.map((section) => (
           <motion.div
             key={section.title}

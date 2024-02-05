@@ -210,16 +210,101 @@ const sections: Section[] = [
         The Norwegian language has two written forms, Bokmål and Nynorsk, both recognized as official. 
         `, 
         desc: '',
-      inner_content: '', 
+      inner_content: `
+      is a North Germanic language spoken mainly in Norway, where it is an official language. Along with Swedish and Danish, Norwegian forms a dialect continuum of more or less mutually intelligible local and regional varieties; some Norwegian and Swedish dialects, in particular, are very close. These Scandinavian languages, together with Faroese and Icelandic as well as some extinct languages, constitute the North Germanic languages. Faroese and Icelandic are not mutually intelligible with Norwegian in their spoken form because continental Scandinavian has diverged from them. While the two Germanic languages with the greatest numbers of speakers, English and German, have close similarities with Norwegian, neither is mutually intelligible with it. Norwegian is a descendant of Old Norse, the common language of the Germanic peoples living in Scandinavia during the Viking Age.
+
+Today there are two official forms of written Norwegian, Bokmål (Riksmål) and Nynorsk (Landsmål), each with its own variants. Bokmål developed from the Dano-Norwegian language that replaced Middle Norwegian as the elite language after the union of Denmark–Norway in the 16th and 17th centuries and then evolved in Norway, while Nynorsk was developed based upon a collective of spoken Norwegian dialects. Norwegian is one of the two official languages in Norway, along with Sámi, a Finno-Ugric language spoken by less than one percent of the population. Norwegian is one of the working languages of the Nordic Council. Under the Nordic Language Convention, citizens of the Nordic countries who speak Norwegian have the opportunity to use it when interacting with official bodies in other Nordic countries without being liable for any interpretation or translation costs.
+      `, 
       image: 'https://www.worldatlas.com/r/w1200/upload/95/cf/7d/shutterstock-376573807.jpg',
       arr : [
         {
-        title: '',
-        main_image: '',
-        content: `
-    
-        ` 
-      },
+          title: 'Language history',
+          main_image: 'https://i.ytimg.com/vi/sHmUo3bD9CU/maxresdefault.jpg',
+          content: `
+          During the medieval times Norway was an independent kingdom. The spoken language was Old Norse, which also was used by the Vikings who settled in Iceland and the Faroe Islands where the Old Norse was maintained to a much larger degree than in mainland Scandinavia.
+
+          In 1349 the Black Death wiped out almost one half of the Norwegian population. As there were only a few literate persons left, no one was present to preserve the written Norwegian language in years to come. In 1397 Norway entered a union with Denmark that lasted until 1814.  Denmark came to be the dominating part, and Danish came to be the primary language among the Norwegian elite. In churches the Danish Bible was used along with Danish religious books after the reformation in 1536, and Danish clergymen held services in Norwegian churches. The law was written in Danish, and all literature, prose and poetry in Norway was written in Danish. This had a crucial effect on the written language. 
+          
+          Early in the 19th century educated Norwegians wrote Danish. The elite in towns spoke Danish with a Norwegian accent. Norwegian dialects were spoken by 95% of the population. Dialects had developed during the four hundred years under Danish rule. Due to the Norwegian topography, differences had developed and distinct local dialects had emerged.
+          
+          In 1814, as a part of the Treaty of Kiel, Norway was transferred from Denmark to Sweden. Before the treaty came into effect, however, a constitutional assembly was called, and on May 17th 1814 Norway declared independence. During the ensuing negotiations, a so-called personal union was declared. Sweden and Norway became two independent countries under the Swedish king.
+          
+          ` 
+        },
+        {
+          title: 'Written Norwegian',
+          main_image: 'https://www.lifeinnorway.net/wp-content/uploads/2014/04/dn.jpg',
+          content: `
+          As Norway was re-established as an independent nation, questions related to language were soon raised. Nationalistic and romantic ideas were voiced and support given to the idea of developing a proper written Norwegian language. One question was which spoken variety should be reflected in the written form. Arguments were based on three different positions.
+
+          Keep the Danish.
+          Develop a new written language based on the Norwegian dialects.
+          Norwegianize the Danish
+          The first alternative was rejected. The two others were both set into practice. Ivar Aasen (1813-1896), a linguist and poet with rural background, developed Landsmål, as it was called, based on extensive research on rural dialects in western and central parts of southern Norway. In 1929 it was labelled Nynorsk – "New Norwegian" which still is used. Landsmål became an official norm in 1885. It later broadened its basis by including forms represented in East Norwegian speech. During the next 50 years the language was widely accepted, but did never obtain a position as the language for the majority.
+          
+          Knud Knudsen (1812-1895), a grammarian and headmaster, had the goal of altering Danish orthography until it reflected the informal speech of the educated classes in Norway. Riksmål was established as a norm by a spelling reform in 1907. In 1929 this variant was labelled "Bokmål" – "Book language". During the 20th century a succession of spelling reforms led to the inclusion of forms related to lower urban class and rural speech in Bokmål.
+          
+          A selection of words was within both Nynorsk and Bokmål were presented with "main" and "alternative" forms. In this way the user was given the opportunity to choose forms that corresponded more with the speaker's dialect. The latitude of these options has been narrowed in recent years, but alternative forms still exist.
+          
+          It became a political goal to fuse Nynorsk and Bokmål into one form, Samnorsk (Common Norwegian). This idea was abandoned in the 1960s, Nynorsk and Bokmål have developed as two parallel written forms of Norwegian.
+          
+          Today Bokmål is dominating in all sectors of the Norwegian society as 85–90 % of the population are writing in Bokmål. The users are living in all parts of the country. To some degree Bokmål is used as a spoken language. Some dialects are more similar to Bokmål than others. These dialects are found in the south Eastern parts of Norway with Oslo as a centre.
+          
+          Nynorsk expanded until World War II when it was used by about 1/3 of the population. Later it has declined, and today about 10-15% of the population are using Nynorsk. Its stronghold today is the central and western parts of southern Norway where the dialectal forms more or less overlap with the written forms.
+          
+          The difference between Nynorsk and Bokmål is sociolinguistically important. At present Bokmål "is often associated with urban culture and an urban way of life. It is also in most cases the language of advertising, pop music, fashion, entertainment and young people's culture. It is the language of weekly magazines and the big newspapers, and also of the commercial world and the world of technology. [...]  Nynorsk is often associated with traditional and national values and with regional or local culture. Writing Nynorsk might be a signal that your identity is more related to local values than to urban style, and that your local roots are of great importance to you." (Maagerø and Simonsen 2005). Nynorsk has a rather weak position in technology, economy and popular culture. On the other hand, these are the areas where Bokmål is most challenged by English.
+          
+          In primary education students choose either Bokmål or Nynorsk as their primary language form. In secondary education they also study the other language form.
+          ` 
+        },
+        {
+          title: 'Spoken Norwegian',
+          main_image: 'https://m.media-amazon.com/images/I/71faxMBNg6L._AC_UF1000,1000_QL80_.jpg',
+          content: `
+          Today dialects find significant support at all levels of Norwegian society from casual speech to teaching, broadcasting and parliament. Students freely speak their local dialects in school. Even the Education Act states that they have the right to do so. It states that the teacher "should pay due attention to the vernacular used by pupils, and that he or she should not attempt to make them abandon their home dialect" (Jahr 2007).
+
+          "While the actual pronunciation of Norwegian has played a fundamental role on the development of both norms, the existence of two competing written norm has on the other hand prevented the formation of an uncontroversial spoken norm" (Kristoffersen 2000). In other words, there is no standard spoken Norwegian. This is reflected by Maagerø (2005) who quotes the rhetorical question "Why should the Oslo way of speaking be better than any other dialect?" 
+          
+          If a student of Norwegian as a second language wants to check the pronunciation of a certain word, such information is in general absent in the major dictionaries. They only provide spelling, definitions and grammatical information. The main dictionary of Bokmål, Bokmålsordboka (Wangensteen 2005), which indicate stress patterns, states that the information given only indicates a general Bokmål reading of words, but  "[i]t has not been the editorial board's intention to make users avoid pronunciation which is different from the one given in the dictionary, but an inherent part of their dialect, nor in any way to state that such variants are inferior." The careful wording of this statement indicates the strong position of Norwegian dialects.
+          
+          However, this does not preclude the existence of a spoken basis for Bokmål. The central eastern part of Norway is considered the centre of Norway as this is the location of the capital, Oslo. In general the formal middle-class urban speech in eastern parts of southern Norway is quite close to Bokmål, and as such it can be labeled as an unofficial norm of Norwegian. It is used in news readings on the radio and TV, when reading Bokmål aloud and in the teaching of Norwegian as a second language to adults. 
+          
+          The spoken basis of Nynorsk is the rural dialects of western Norway. These dialects by themselves form a heterogeneous picture, and one cannot identify one dialect as the common denominator of Nynorsk. It is not correct to say that people speak Nynorsk even though they write Nynorsk. One may hear spoken Nynorsk in news readings and in stage performances. 
+          
+          As Norwegians are exposed to the different forms of Norwegian from childhood on, they generally face minor problems in understanding different dialects. In school students are not taught how to speak Bokmål and Nynorsk. In reading, dialectal prosody is used and the Bokmål or Nynorsk wording is not necessarily respected. The speech sounds can be an approximation to Central East Norwegian or the reader may use the sounds of his/her dialect.
+          
+          Adults usually speak the dialect of the place where they grew up, but of course, there are people who have changed the dialect of their childhood to another dialect or to a speech based on Bokmål. Consequently, when a Norwegian is approached by a newly arrived foreigner (who will speak the Bokmål learnt in class), the Norwegian most likely will answer using dialectal forms. As phonology, inflections etc. may differ radically from the Bokmål form, there is a great chance that the student of Norwegian as a second language will not be able to transfer the word spoken to its corresponding Bokmål form and thus will not understand what is said. This might happen due to different speech sounds,  historical processes reflected in the dialect, different stress placement, various fast speech phenomena, different vocabulary etc.
+
+          ` 
+        },
+        {
+          title: 'Norwegian as a second language',
+          main_image: 'https://www.uib.no/sites/w3.uib.no/files/styles/area_main/public/media/aeae.png?itok=TPV7M-1M',
+          content: `
+          Adult students in introductory courses of Norwegian as a second language will most likely be taught spoken Bokmål in class, at times even in areas where Nynorsk is used. As most textbooks are written in Bokmål, teachers, irrespective of their dialectal background, adapt their way of speaking to Bokmål. Normally they maintain the prosodic features of their dialect. Thus spoken Bokmål will be found in several forms. Many of them will be different from Central East Norwegian. Students may experience several forms of spoken Bokmål, but since the ability to change from dialect to spoken Bokmål is a skill used by second language teachers, and not by dialect speaking Norwegians in general, the students of Norwegian as a second language will need some time and have to spend some effort in order to develop an understanding of the local varieties of the Norwegian language.
+
+          ` 
+        },
+        {
+          title: 'National minorities',
+          main_image: 'https://www.ntnu.edu/documents/1630143/1983891/map_dialectsNY_now/0eba461d-d6c5-4ef6-aa82-0c04ce153bc0?t=1296479735936',
+          content: `
+          Today about 20 000 individuals in Norway have the Sámi language as their mother tongue. Sámi is a member of the Finno-Ugric branch of languages, and its roots in Norway may extend as far back as Norwegian. North Sámi is an official language on a par with Norwegian in the some districts of in the two northern counties. 
+
+          Groups with long-term attachment to Norway are defined as national minorities, that is the Kvens, who speak Kven; Jews (Jiddisch and modern Hebrew), the so called Forest finns (Norwegian has replaced Finnish); Rom or Gypsies (Rom), and the Romani people (Romani). Approximately 4 000 hearing impaired persons utilize Norwegian Sign Language.
+
+          ` 
+        },
+        {
+          title: 'Foreign languages',
+          main_image: 'https://study.com/cimages/multimages/16/680px-location_norway.svg7767827485114046529.png',
+          content: `
+          Most Norwegians aged 60 or younger studied English in school. Some of the elderly Norwegians will have problems communicating with foreigners in English, but not so for younger people. Today, English is Norway's most important foreign language for international use, followed by German and French.
+
+          There is a large number of immigrants whose first language is not Norwegian as 10 percent of the Norwegian population are immigrants. Currently more than 120 different mother tongues are represented in Norwegian primary schools. The major immigrant languages besides Swedish and Danish are Urdu, Vietnamese, Somali, Persian and Turkish.
+
+          ` 
+        },
     ]
     },
 
@@ -236,31 +321,122 @@ const sections: Section[] = [
       image: 'https://www.fjordtours.com/media/4199/fn238dhm-foto_terje_rakke.jpg',
       arr : [
         {
-          title: '',
-          main_image: '',
+          title: 'Anon Egeland',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/anon-egeland-2000.jpg?w=500&ssl=1',
           content: `
-      
+          Ånon Egeland was born in Oslo in 1954. He is one of the few musicians who plays traditional music from the county of Agder. He is first and foremost a Hardanger fiddler (the Norwegian fiddle with drone strings, as heard on Devil’s Tune) but he also plays jew’s harp and two kinds of Norwegian flute.
+
+          After many years of collaboration on other musicians’ projects, this multi-instrumentalist finally released his first solo CD “Ånon” in 1999. The music on the CD is based on the Agder tradition, and Ånon Egeland conveys this message through his own unique “Ånon sound”.
+          
+          Accompanying Ånon on his tours is Leiv Solberg on mandola and guitar. Leiv has been playing with Ånon for over 20 years, so their work together is nearly telepathic.
+
           ` 
         },
         {
-          title: '',
-          main_image: '',
+          title: 'Edvard Grieg',
+          main_image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Edvard_Grieg_portrait_%28cropped%29.jpg/330px-Edvard_Grieg_portrait_%28cropped%29.jpg',
           content: `
-      
+          Norwegian composer and pianist. He is widely considered one of the leading Romantic era composers, and his music is part of the standard classical repertoire worldwide. His use of Norwegian folk music in his own compositions brought the music of Norway to fame, as well as helping to develop a national identity, much as Jean Sibelius did in Finland and Bedřich Smetana in Bohemia.
+          Grieg is the most celebrated person from the city of Bergen, with numerous statues which depict his image, and many cultural entities named after him: the city's largest concert building (Grieg Hall), its most advanced music school (Grieg Academy) and its professional choir (Edvard Grieg Kor). The Edvard Grieg Museum at Grieg's former home Troldhaugen is dedicated to his legacy
           ` 
         },
         {
-          title: '',
-          main_image: '',
+          title: 'Åse Teigland',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/Ase_Teigland.jpg?fit=500%2C500&ssl=1',
           content: `
-      
+          Åse Teigland was born in 1975. She comes from Utne in Hardanger. She is one of Norway’s talented ardanger fiddle players, and plays with authentic feeling and elegance.
+
+          Åse Teigland studied with several well-known fiddlers, including Knut Hamre, Stein Versto and Leif Rygg. She studied at the Folkemusikakademiet in Rauland (1994-96), Bergen University College and the Ole Bull Academy at Voss (1998-2000).
+          
+          She has collaborated with Knut Hamre, Frank Rolland, Synnøve S. Bjørset, Anne Hytta, and Alexander Aga Røynstrand.
+          
+          Åse Teigland’s repertoire consists primarily of traditional songs and tunes from Hardanger and Voss.
           ` 
         },
         {
-          title: '',
-          main_image: '',
+          title: 'Frode Haltli',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/Frode_Halti_RolfSchoellkopf.jpg?w=500&ssl=1',
           content: `
-      
+          Accordion virtuoso Frode Haltli has received several awards, including a Norwegian Spellemann Prize in 2002, and was named Young Soloist of the Year by the Norwegian Concert Institute in 2001.
+
+          Haltli was was a member of Rusk and contributed to a long line of productions, including recordings for the prestigious German label ECM.
+          
+          Since 1999 he has performed and recorded regularly with Scandinavian trio POING.
+          ` 
+        },
+        {
+          title: 'Alan Walker',
+          main_image: 'https://i.scdn.co/image/ab6761610000e5ebbf753c009fd9c2d53351dd3c',
+          content: `
+          Norwegian DJ and music producer, primarily known for his single "Faded" (2015), which was certified platinum in 14 countries. He has also released several known songs including "Force" (2015), "Sing Me to Sleep" (2016), "All Falls Down" featuring Noah Cyrus and Digital Farm Animals (2017), "Darkside" (2018), "Diamond Heart" (2018), "On My Way" featuring Sabrina Carpenter and Farruko (2019), and "Alone, Pt. II" featuring Ava Max (2019), all of which attracted hundreds of millions of views on YouTube. Three of his songs—"Faded", "Alone" (2016) and "The Spectre" (2017)—have garnered over a billion views on YouTube.
+
+          In early 2017, Walker's channel emerged as the most subscribed YouTube channel registered in Norway, with six million subscribers. His channel is still the most subscribed in Norway, and has 44.9 million subscribers as of 14 January 2024. He also has the most views of any Norwegian creator, with approximately 13.5 billion views as of 14 January 2024.
+          ` 
+        },
+        {
+          title: 'Agnes Buen Garnas',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/agnes_buen_garnas-500.jpg?w=500&ssl=1',
+          content: `
+          Agnes Buen Garnås, born in 1946, is one of Norway’s leading traditional singers. She is a member of the famous Buen family (of Jondalen in Telemark), and has been a pioneer in the efforts to revitalize Norwegian vocal traditions. Her achievements in this area have had a great influence on young traditional vocalists throughout the country.
+
+          Garnås has inspired them to seek out their own local traditions, and has brought many young singers onto the stage. Her collaboration with Jan Garbarek on Rosensfole has become a classic in its genre. Her warm, lovely voice finds its mate in Garbarek’s soundscape.
+
+          ` 
+        },
+        {
+          title: 'Kirsten Bråten Berg',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/Kirsten_Braten_Berg.jpg?w=500&ssl=1',
+          content: `
+          Kirsten Bråten Berg (born 1950) has her own silversmith workshop, but is known primarily for unique, richly resonant kveding.
+
+          She has lived in Setesdal since 1973, and been one of the leading figures efforts to preserve folk music heritage area. She also instrumental presenting new contexts, for instance through her collaboration with jazz bassist Arild Andersen.
+          
+          Kirsten Bråten Berg won the first prize at National Contest for Traditional Music in 1987, has released a number of recordings, Spellemannpris award several times, and toured often Norway abroad.
+          
+          In 1996 two musicians from western Africa and two from Setesdal combined forces to produce a recording, “Frå Senegal til Setesdal”, featuring stev, traditional songs and lullabies. The music is unmistakably Norwegian, but the African music weaves its way effortlessly into its fabric and reminds us that folk music is created by something deep inside the human soul, beyond language and culture.
+
+          ` 
+        },
+        {
+          title: 'Adjagas',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/adjagas.jpg?w=350&ssl=1',
+          content: `
+          Norwegian act Adjagas is a yoik group formed in 2004 by Sara Marielle Gaup and Lawra Somby, both from a long line of Sami ancestry. A yoiker is a singer or a chanter with a Sami origin, and it represents a very historically important part of the musical history of Northern Europe.
+
+          Sara Marielle Gaup, born in 1984, is from Guovdageaidnu/Kautokeino, whose musical heritage was passed down to her from her parents and generations before that. She began singing at a very early age, and it was through continued musical education at SMG she developed her unique sense of performance and perfected her singing voice.
+          
+          Lawra Somby, born in 1981, was taught the great gift of yoiking from his father, Ande Somby. Lawra started performing on a variety of stages in 1997, and he has performed his music both solo as well as with his father Ande, making him a an experienced singer with a strong stage presence.
+          
+          Yoik is not about making stories about people, animals, situations or landscapes. Yoik is the young woman, the eagle, the grass field by the river they are recreations of a moment, a sense, a memory how the wings of a bird slowly touches your chin, the smell of a fireplace and how it evokes memories. The yoik is about bringing memories into the light of day, making them available and inviting new people into this special world
+          
+          Samiland, also known as Lapland, is the territory at the very northernmost parts of Norway, Sweden and Finland, spreading into Russia.
+          ` 
+        },
+
+        {
+          title: 'Olav Torget',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/Olav_Torget.jpg?w=500&ssl=1',
+          content: `
+          Olav Torget has been an independent musician since the early nineties. He plays electric and acoustic guitars and the West African konting (ngoni).
+
+          He learned music at the University of Oslo with guitarists Knut
+          Værnes, Bjørn Klakegg and Staffan William-Olsson. Olav also studied konting in Senegal and Gambia with Amadou A. Gueye.
+          
+          He has performed with Kristin Asbjørnsen, Karl Seglem, Geir Lysne,
+          Solo Cissokho, Diom de Kossa, Anita Skorgan, Sjur Miljeteig, Eli
+          Storbekken, Steinar Ofsdal, and Ali Farka Toure among others.
+          ` 
+        },
+        {
+          title: 'Trygve Seim',
+          main_image: 'https://i0.wp.com/worldmusiccentral.org/wp-content/uploads/tryvge_seim_4-500.jpg?w=500&ssl=1',
+          content: `
+          Inspired early in his creative life by Jan Garbarek and by Edward Vesala, Trygve Seim has worked in many modern jazz contexts, and continues to tour with Manu Katché’s group.
+
+          In his own music, however, distance from conventional definitions of jazz becomes ever more marked. Investigation of Asian, Middle Eastern and East European music – and especially the sounds of the Armenian duduk, the Japanese shakuhachi, and the Indian bansuri flute – have had their effect on Seim’s music and brought about a redefining of the nature of dynamics. Subtle shadings and textures are part of his diversity, and microtonal phrasing characteristic of his melodic approach.
+          
+          In additional to his discography as a leader and as a member of The Source, Trygve Seim appears on ECM recordings by Iro Haarla (Northbound), Sinikka Langeland (Starflowers), Christian Wallumrød (Sofienberg Variations), and Manu Katché (Playground). Other recent activities have included extended stays in Cairo, where Seim studied Arabian modes and played concerts with pianist Fathy Salama.
+
           ` 
         },
     ]

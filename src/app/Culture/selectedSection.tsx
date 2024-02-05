@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 import ScrollCards from "@/components/ScrollCards";
+import { AiOutlineClose } from "react-icons/ai";
 
 export default function SelectedSection({ selectedSection, setSelectedSection }: any) {
   const modalVariants = {
@@ -17,10 +18,6 @@ export default function SelectedSection({ selectedSection, setSelectedSection }:
     animate: { opacity: 1, transition: { duration: 0.5 } },
   };
 
-
-
-
-
   return (
     <AnimatePresence>
       {selectedSection && (
@@ -34,12 +31,15 @@ export default function SelectedSection({ selectedSection, setSelectedSection }:
           onClick={closeModal}
         >
 
-
           <motion.div
             variants={modalVariants}
             className="bg-white pt-6 px-6 rounded-xl  w-[95vw] h-[95vh] flex overflow-y-auto justify-center relative"
             onClick={(e) => e.stopPropagation()}
           >
+
+            <div className="absolute top-4 right-4 bg-white rounded-full p-3 hover:rotate-90 duration-300 z-20 cursor-pointer" onClick={closeModal}>
+              <AiOutlineClose size={24} color="#333" />
+            </div>
 
             <div className="relative w-full h-[80vh] flex flex-col overflow-x-hidden items-center">
               <img
@@ -56,12 +56,9 @@ export default function SelectedSection({ selectedSection, setSelectedSection }:
 
               <ScrollCards sources={selectedSection.arr}/>
 
-              <img src="" alt="" />
-
             </div>
             
           </motion.div>
-
 
         </motion.div>
       )}

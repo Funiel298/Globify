@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import VerticalScroll from '@/components/VerticalScroll';
 import CenterParagraphs from '@/components/CenterParagraphs';
 import WideParagraphs from '@/components/WideParagrahs';
-import Footer from '@/components/Footer';
 import Cards from '@/components/Cards';
 import { motion } from 'framer-motion';
 
