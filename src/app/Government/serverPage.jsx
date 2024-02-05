@@ -1,6 +1,7 @@
 
 import CenterParagraphs from "@/components/CenterParagraphs"
 import { useState } from "react";
+import {motion, useScroll, useTransform} from 'framer-motion'
 
 export default function Government(){
 
@@ -93,7 +94,7 @@ export default function Government(){
 
     
 
-    const handlePartyHover = (party: typeof parties[number]) => {
+    const handlePartyHover = (party ) => {
         setSelectedParty(party);
         setShowModal(true);
       };
@@ -102,11 +103,18 @@ export default function Government(){
         setSelectedParty(null);
         setShowModal(false);
       };
+
+      let {scrollYProgress} = useScroll()
+      let y = useTransform(scrollYProgress, [0,1], ['0%', '90%'])
+      let a = useTransform(scrollYProgress, [0,1], ['0%', '60%'])
+      let b = useTransform(scrollYProgress, [0,1], ['0%', '70%'])
+      let c = useTransform(scrollYProgress, [0,1], ['0%', '90%'])
       
 
     return(
         <div >
-            <section className="flex justify-center flex-col items-center h-screen ">
+            <motion.section style={{y : y}} className="flex justify-center flex-col items-center h-screen mb-10 z-10">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Emblem_of_the_Norwegian_Communications_Authority.svg" alt="img" className="absolute -z-20 opacity-30 h-full" />
                 <a href="https://www.regjeringen.no/en/id4/"><img className="w-[15vw] mt-5 h-auto rounded-xl duration-300 hover:scale-105" alt="Norway Governemnt Icon" src={'https://www.africa-newsroom.com/files/large/be9bb20d039eef4'} /></a>
                 <h1 className="font-semibold text-2xl my-3">Political Directions</h1>
                 <div className="flex flex-row w-1/2 h-5 justify-between">
@@ -127,10 +135,11 @@ export default function Government(){
                     </h1>
                 </CenterParagraphs>
 
-            </section>
+            </motion.section>
 
-            <section className="flex justify-center flex-col items-center h-screen">
-                <div className="flex flex-row justify-around items-center w-1/2">
+            <motion.section style={{y: a}} className="flex justify-center flex-col items-center h-screen my-10 py-10 z-20">
+            <img src="https://gijn.org/wp-content/uploads/2022/07/shutterstock_2007342590.jpg" alt="img" className="absolute -z-20 opacity-50 h-full w-full rounded-2xl" />
+                <div className="flex flex-row justify-around items-center w-1/2 z-10">
                     <a href="https://en.wikipedia.org/wiki/Jonas_Gahr_St%C3%B8re">
                         <img className="w-[15vw] mt-5 h-auto rounded-xl duration-300 hover:scale-105" alt="Norway Governemnt Icon" src={'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Nordic_prime_ministers%E2%80%99_meeting_in_Helsinki_1.11.2022_-_52469398971_%28cropped%29.jpg/330px-Nordic_prime_ministers%E2%80%99_meeting_in_Helsinki_1.11.2022_-_52469398971_%28cropped%29.jpg'} />
                         <span className="text-sm">Jonas Gahr Støre <br /> Prime Minister of Norway</span>
@@ -157,15 +166,15 @@ export default function Government(){
                         The functions of the king, Harald V, are mainly ceremonial, but he has influence as the symbol of national unity. 
                         <br /><br />
                         Although the constitution of 1814 grants important executive powers to the king, these are always exercised by the 
-                        Council of State in the name of the king (King's Council, or cabinet). The king is also High Protector of the Church of 
-                        Norway (the state church), Grand Master of the Royal Norwegian Order of St. Olav, and symbolically Supreme Commander of the Norwegian armed forces.
+                        Council of State in the name of the king (King's Council, or cabinet)
                     </h1>
                 </CenterParagraphs>
 
-            </section>
+            </motion.section>
             
 
-        <section className="flex justify-center flex-col items-center h-screen">
+        <motion.section style={{y: b}} className="flex justify-center flex-col items-center h-screen my-10 z-30">
+            <img src="https://cloudfront-us-east-2.images.arcpublishing.com/reuters/JLGVVKAH3RI7XF6WBKFU5GDBRY.jpg" alt="img" className="absolute -z-10 w-full rounded-2xl opacity-30 h-full" />
             <h1 className="font-semibold text-2xl my-3">Political parties and elections</h1>
             <img className="w-1/2 my-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Norway_Storting_2021.svg/884px-Norway_Storting_2021.svg.png" alt="Parties currently in Parliament" />
             <div className="flex flex-row w-1/2 h-5 justify-between">
@@ -201,10 +210,10 @@ export default function Government(){
 
             
 
-        </section>
+        </motion.section>
 
-        <section className="flex justify-center flex-col items-center h-screen">
-
+        <motion.section style={{y: c}} className="flex justify-center flex-col items-center h-screen my-10 z-40">
+            <img src="https://gijn.org/wp-content/uploads/2022/07/shutterstock_2007342590.jpg" alt="img" className="absolute -z-10 opacity-30 h-full rounded-2xl w-full" />
             <CenterParagraphs>
                 <h1>
                     Norway conducts its national-level legislative elections through the Storting, the parliament with 169 members serving four-year terms. The election system employs proportional representation in multi-seat constituencies and prohibits the dissolution of the parliament during this term.
@@ -221,7 +230,7 @@ export default function Government(){
                 </h1>
             </CenterParagraphs>
         
-        </section>
+        </motion.section>
 
         
         </div>
