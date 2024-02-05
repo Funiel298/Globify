@@ -90,7 +90,7 @@ export default function Government(){
     ] 
 
     const [showModal, setShowModal] = useState(false);
-    const [selectedParty, setSelectedParty] = useState<null | typeof parties[number]>(null);
+    const [selectedParty, setSelectedParty] = useState(null);
 
     
 

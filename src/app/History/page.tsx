@@ -1,4 +1,7 @@
+'use client'
 import CenterParagraphs from "@/components/CenterParagraphs"
+import { motion, useScroll } from "framer-motion"
+import { useRef } from "react"
 
 export default function History(){
 
@@ -30,6 +33,11 @@ export default function History(){
             image: '' 
         },
     ]
+    const element = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target: element,
+        offset: ['start 0.7', 'start 0.2']
+    })
 
     return(
 
@@ -38,9 +46,9 @@ export default function History(){
             <div className="flex justify-center ">
                 
                 <CenterParagraphs name={'A Brief History of Norway'}>
-                    <h5>
+                    <motion.h5 ref={element} style={{opacity: scrollYProgress}}>
                         
-                        <span className='font-semibold text-lg'>Norway's beginnings</span><br /><br />
+                        <motion.span ref={element} style={{opacity: scrollYProgress}} className='font-semibold text-lg'>Norway's beginnings</motion.span><br /><br />
                         People began settling in Norway very early - in 9000 BC, in fact. This was after the end of the first ice age, so it was now an inhabitable location. Settlers survived by hunting and fishing animals such as seal, deer, elk and whales. Farming didn't become prominent until 500 BC, which was known as the bronze age. This time period got its name from the various weapons and jewelry created.
                         <br /><br />
                         <img className="w-full h-[20vw] object-cover" src="https://64.media.tumblr.com/51180ac6604c39f4de3a775f8be5a05e/tumblr_ptwyliEbdm1rm4wnho1_1280.jpg" alt="" />
@@ -66,7 +74,7 @@ export default function History(){
 
                         <br /><span className='font-semibold text-lg'>Norway's independence</span><br /><br />
                         Norway didn't achieve full independence until 1905 when Haakon VII was crowned the King of Norway. Before then, the country was a dependency under Denmark until 1814, then it entered into a new union with Sweden. Not shortly after Norway's official independence, women were given the right to vote in local elections in 1907, then in national elections in 1913.
-                    </h5>  
+                    </motion.h5>  
                     
                 </CenterParagraphs>
             </div>

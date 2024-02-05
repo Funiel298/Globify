@@ -5,42 +5,39 @@ import { Navigation, Mousewheel } from 'swiper/modules';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/scrollbar';
-import firstImage from '../images/mainPage/ptushkin_norway.jpg'
-import secondImage from '../images/mainPage/norway_4k.jpg'
 
 
 
 // import required modules
 import { Scrollbar } from 'swiper/modules';
-import { link } from 'fs';
 
-export default function VerticalScroll({sources, sign, SetState}: any){
+export default function VerticalScroll({sources, sign}: any){
     let arr = [
+        {
+            link : 'https://www.youtube.com/embed/c3suauAz0zQ',
+            name : 'nordic home office ~ chill lofi beats',
+            description : 'Cozy Nordic is an independent little channel, with the aim of creating cozy little moments for everyone to enjoy, whether you need to calm down or concentrate. The music and animations are made by myself, as I personally think that it creates a more whole experience. ',
+            image: 'https://i3.ytimg.com/vi/c3suauAz0zQ/maxresdefault.jpg'
+        },
+        {
+            link : 'https://www.youtube.com/embed/zyZAMR56mXY',
+            name : 'Норвегия. Богатая и очень красивая. Большой Выпуск.',
+            description : 'Съемка, монтаж и все остальное : ВСЕ САМ.',
+            image: 'https://i3.ytimg.com/vi/zyZAMR56mXY/maxresdefault.jpg'
+            
+        },
         {
             link : 'https://www.youtube.com/embed/bAGhXcYc0o4',
             name : 'Geography Now! NORWAY',
             description : 'Ahhh the land of the ....never ending and / or never rising sun.',
-            image: firstImage,
+            image: 'https://i3.ytimg.com/vi/bAGhXcYc0o4/maxresdefault.jpg',
         },
         {
             link : 'https://www.youtube.com/embed/CxwJrzEdw1U',
             name : 'Norway 4K - Scenic Relaxation Film with Calming Music',
             description : `Norway is one of the most scenic countries in the world. Enjoy this 4K relaxation film across the Norway's most beautiful regions. From the endless Fjords to the stunning Lofoten Islands, Norway's landscapes have so much to offer. `,
-            image: secondImage
+            image: 'https://i3.ytimg.com/vi/CxwJrzEdw1U/maxresdefault.jpg'
           },
-        {
-            link : 'https://www.youtube.com/embed/zyZAMR56mXY',
-            name : 'Норвегия. Богатая и очень красивая. Большой Выпуск.',
-            description : 'Съемка, монтаж и все остальное : ВСЕ САМ.',
-            image: '../images/mainPage/geographynow_norway.jpg'
-            
-        },
-        {
-            link : 'https://www.youtube.com/embed/c3suauAz0zQ',
-            name : 'nordic home office ~ chill lofi beats',
-            description : 'Cozy Nordic is an independent little channel, with the aim of creating cozy little moments for everyone to enjoy, whether you need to calm down or concentrate. The music and animations are made by myself, as I personally think that it creates a more whole experience. ',
-            image: '../images/mainPage/geographynow_norway.jpg'
-        },
     ]
     
     sources == null ? sources = arr : null
@@ -63,7 +60,7 @@ export default function VerticalScroll({sources, sign, SetState}: any){
                 {sources.map((s : any)=>(
                     <SwiperSlide>
                         <div key={s.image} className='border-b-2 pb-5 border-white flex h-full flex-row'>
-                            <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>SetState(s?.id-1)}>
+                            <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>window.open(s.link)}>
                                 <img src={s.image} alt={s.sign} className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
                                 <a href={s.link} className="absolute bottom-0  right-0 p-3 bg-white text-sm font-medium text-[#212427] transition-all duration-300 ease-in-out transform group-hover:bg-[#212427] group-hover:text-white">
                                     {sign}
