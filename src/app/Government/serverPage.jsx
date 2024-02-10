@@ -115,7 +115,7 @@ export default function Government(){
 
     return(
         <div >
-            <Link href={'/'} className='absolute left-5 top-5 hover:left-9 duration-300'>
+            <Link href={'/'} className='absolute left-5 top-5 hover:left-9 duration-300 cursor-pointer'>
                 <FaAngleLeft size={30} />
             </Link>
             <motion.section style={{y : y}} className="flex justify-center flex-col items-center h-screen mb-10 z-10">
