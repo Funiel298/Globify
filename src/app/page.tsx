@@ -7,8 +7,41 @@ import CenterParagraphs from '@/components/CenterParagraphs';
 import WideParagraphs from '@/components/WideParagrahs';
 import Cards from '@/components/Cards';
 import { motion } from 'framer-motion';
+import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import { useState } from 'react';
 
 export default function Home() {
+
+  const [counter, setCounter] = useState(0)
+
+
+  const data = [
+    {
+      fname: 'Nor',
+      sname: 'way',
+
+    },
+    {
+      fname: 'Fin',
+      sname: 'land',
+      
+    },
+    {
+      fname: 'Ice',
+      sname: 'land',
+      
+    },
+
+  ]
+
+  function Changer(command: string){
+    if(command == 'add'){
+      setCounter((prev)=>prev+1)
+    }
+    else if(command == 'remove'){
+      setCounter((prev)=>prev-1)
+    }
+  }
 
 
 
@@ -25,14 +58,36 @@ export default function Home() {
           loading="lazy" 
         />
         <div className="absolute text-white top-1/3 transform text-start flex justify-center items-start flex-col p-5">
-          <motion.h1
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="text-[12vw] font-bold m-0"
-          >
-            Norway
-          </motion.h1>
+
+          <div className='flex flex-row items-center relative'>
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-[12vw] font-bold m-0 p-0 flex items-center group"
+            >
+              <GrFormPrevious 
+              onClick={()=>setCounter((prev)=>prev-1)} 
+              className="text-[4vw] m-0 absolute left-0 duration-150 opacity-0 group-hover:opacity-60 hover:!opacity-100 !shadow-2xl shadow-white " 
+              style={{left: '-2.5vw'}} />
+              {data[counter].fname}
+            </motion.h1>
+
+            <motion.h1
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-[12vw] font-bold m-0 flex items-center group"
+            >
+              {data[counter].sname}
+              <GrFormNext 
+              onClick={()=>setCounter((prev)=>prev+1)}
+              className=" text-[4vw] right-0 ml-10 absolute opacity-0 group-hover:opacity-60 hover:!opacity-100 duration-150" 
+              style={{right: '-3vw'}} />
+            </motion.h1>
+          </div>
+
+
           <motion.h6
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -41,6 +96,7 @@ export default function Home() {
           >
             Norway, one of the best countries in the world. If you consider only quality of life to live here, I think you will like it.
           </motion.h6>
+
         </div>
         <VerticalScroll sign={'Play'} />
       </div>
