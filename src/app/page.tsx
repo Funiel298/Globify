@@ -11,6 +11,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from 'react';
 import Modal from '@/components/Modal';
 import ImageCard from '@/components/ImageCard';
+import data from '../components/CountriesData.json'
 
 export default function Home() {
 
@@ -30,26 +31,7 @@ export default function Home() {
     animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
   }
 
-  const data = [
-    {
-      name: 'Norway',
-      image: 'https://www.alphatrad.co.uk/sites/alphatrad.co.uk/files/styles/news_image_amp/public/images/articles/interesting-facts-about-norway.jpg?itok=lqes7rYn',
-      description: 'Known for its stunning fjords, vibrant cities, and high quality of life, Norway offers breathtaking natural landscapes and a rich cultural heritage.',
-    },
-    {
-      name: 'Finland',
-      image: 'https://iworld.com/wp-content/uploads/2023/03/life-finland.jpg',
-      description: 'Famous for its picturesque lakes, Northern Lights, and design culture, Finland is a land of innovation, saunas, and a strong emphasis on education.',
-    },
-    {
-      name: 'Iceland',
-      image: 'https://cdn.britannica.com/71/73371-050-9DFAEC1E/Reykjavik-Iceland.jpg',
-      description: 'With its rugged landscapes, geothermal wonders, and Viking history, Iceland is a unique destination known for its dramatic scenery and outdoor adventures.',
-    },
-    
-
-  ]
-
+  
   function ChangeCountry(index:number){
     setCounter(index)
     closeModal()
@@ -60,14 +42,11 @@ export default function Home() {
   return (
     <div>
       <Header />
-      <div className="relative h-screen overflow-hidden">
-        <Image
-          src={darkNorway}
+      <div className="relative h-screen overflow-hidden bg-black">
+        <img
+          src={data[counter].image}
           alt="Norway"
-          layout="fill"
-          objectFit="cover"
-          className="opacity-90 z-1 object-top"
-          loading="lazy" 
+          className="opacity-70 z-1 object-top object-cover w-full"
         />
         <div className="absolute text-white top-1/3 transform text-start flex justify-center items-start flex-col p-5">
 
@@ -92,7 +71,7 @@ export default function Home() {
           </motion.h6>
 
         </div>
-        <VerticalScroll sign={'Play'} />
+        <VerticalScroll sign={'Play'} index={counter} />
 
         <Modal isOpen={isModalOpen} onClose={closeModal} modalVariants={modalVariants}>
           <div className="p-4 bg-black grid grid-cols-3">
@@ -107,7 +86,7 @@ export default function Home() {
 
         <div className='flex flex-col justify-center items-center'>
           
-          <WideParagraphs/>
+          <WideParagraphs info={data[counter]} />
 
           <Cards/>
 
