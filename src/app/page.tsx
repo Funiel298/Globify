@@ -7,40 +7,52 @@ import CenterParagraphs from '@/components/CenterParagraphs';
 import WideParagraphs from '@/components/WideParagrahs';
 import Cards from '@/components/Cards';
 import { motion } from 'framer-motion';
-import { GrFormPrevious, GrFormNext } from "react-icons/gr";
+import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from 'react';
+import Modal from '@/components/Modal';
+import ImageCard from '@/components/ImageCard';
 
 export default function Home() {
 
   const [counter, setCounter] = useState(0)
+  const [isModalOpen, setIsModalOpen] = useState(false)
 
+  const openModal = () => {
+    setIsModalOpen(true);
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
+
+  const modalVariants = {
+    initial: { opacity: 0, y: -20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.3 } },
+  }
 
   const data = [
     {
-      fname: 'Nor',
-      sname: 'way',
-
+      name: 'Norway',
+      image: 'https://www.alphatrad.co.uk/sites/alphatrad.co.uk/files/styles/news_image_amp/public/images/articles/interesting-facts-about-norway.jpg?itok=lqes7rYn',
+      description: 'Known for its stunning fjords, vibrant cities, and high quality of life, Norway offers breathtaking natural landscapes and a rich cultural heritage.',
     },
     {
-      fname: 'Fin',
-      sname: 'land',
-      
+      name: 'Finland',
+      image: 'https://iworld.com/wp-content/uploads/2023/03/life-finland.jpg',
+      description: 'Famous for its picturesque lakes, Northern Lights, and design culture, Finland is a land of innovation, saunas, and a strong emphasis on education.',
     },
     {
-      fname: 'Ice',
-      sname: 'land',
-      
+      name: 'Iceland',
+      image: 'https://cdn.britannica.com/71/73371-050-9DFAEC1E/Reykjavik-Iceland.jpg',
+      description: 'With its rugged landscapes, geothermal wonders, and Viking history, Iceland is a unique destination known for its dramatic scenery and outdoor adventures.',
     },
+    
 
   ]
 
-  function Changer(command: string){
-    if(command == 'add'){
-      setCounter((prev)=>prev+1)
-    }
-    else if(command == 'remove'){
-      setCounter((prev)=>prev-1)
-    }
+  function ChangeCountry(index:number){
+    setCounter(index)
+    closeModal()
   }
 
 
@@ -59,33 +71,15 @@ export default function Home() {
         />
         <div className="absolute text-white top-1/3 transform text-start flex justify-center items-start flex-col p-5">
 
-          <div className='flex flex-row items-center relative'>
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-[12vw] font-bold m-0 p-0 flex items-center group"
-            >
-              <GrFormPrevious 
-              onClick={()=>setCounter((prev)=>prev-1)} 
-              className="text-[4vw] m-0 absolute left-0 duration-150 opacity-0 group-hover:opacity-60 hover:!opacity-100 !shadow-2xl shadow-white " 
-              style={{left: '-2.5vw'}} />
-              {data[counter].fname}
-            </motion.h1>
-
-            <motion.h1
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="text-[12vw] font-bold m-0 flex items-center group"
-            >
-              {data[counter].sname}
-              <GrFormNext 
-              onClick={()=>setCounter((prev)=>prev+1)}
-              className=" text-[4vw] right-0 ml-10 absolute opacity-0 group-hover:opacity-60 hover:!opacity-100 duration-150" 
-              style={{right: '-3vw'}} />
-            </motion.h1>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="text-[12vw] font-bold m-0 p-0 flex items-center group"
+          >
+            {data[counter].name}
+            <IoMdArrowDropdown className='text-[5vw] mt-10 opacity-0 duration-300 group-hover:opacity-70 hover:!opacity-100' onClick={openModal} />
+          </motion.h1>
 
 
           <motion.h6
@@ -94,11 +88,19 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="w-1/2 p-3 m-0"
           >
-            Norway, one of the best countries in the world. If you consider only quality of life to live here, I think you will like it.
+            {data[counter].description}
           </motion.h6>
 
         </div>
         <VerticalScroll sign={'Play'} />
+
+        <Modal isOpen={isModalOpen} onClose={closeModal} modalVariants={modalVariants}>
+          <div className="p-4 bg-black grid grid-cols-3">
+            {data.map((s, index)=>(
+              <ImageCard key={index+s.name} s={s} position='col' func={()=>ChangeCountry(index)} />
+            ))}
+          </div>
+        </Modal>
       </div>
 
       <div className='flex justify-center'>

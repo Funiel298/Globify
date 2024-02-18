@@ -10,6 +10,7 @@ import 'swiper/css/scrollbar';
 
 // import required modules
 import { Scrollbar } from 'swiper/modules';
+import ImageCard from './ImageCard';
 
 export default function VerticalScroll({sources, sign}: any){
     let arr = [
@@ -42,6 +43,7 @@ export default function VerticalScroll({sources, sign}: any){
     
     sources == null ? sources = arr : null
 
+
     return(
         <div className='absolute w-[35%] top-1/2 bg-[#212427] left-[66%] p-5 h-1/2  '>
             <Swiper
@@ -58,23 +60,7 @@ export default function VerticalScroll({sources, sign}: any){
             >
                 {sources.map((s : any)=>(
                     <SwiperSlide>
-                        <div key={s.image} className='border-b-2 pb-5 border-white flex h-full flex-row'>
-                            <div className='p-0 w-1/2 relative group overflow-hidden' onClick={()=>window.open(s.link)}>
-                                <img src={s.image} alt={s.sign} className="group-hover:scale-110 duration-300 ease-in-out transition-transform " />
-                                <a href={s.link} className="absolute bottom-0  right-0 p-3 bg-white text-sm font-medium text-[#212427] transition-all duration-300 ease-in-out transform group-hover:bg-[#212427] group-hover:text-white">
-                                    {sign}
-                                </a>
-                            </div>
-
-
-
-                            <div className='flex flex-col p-5 text-start items-start text-white w-1/2 justify-around'>
-                                <h1 className='text-lg font-semibold'>{s?.name}</h1>
-                                <h3 className='text-xs font-normal'>
-                                    {s?.description?.length > 110 ? s?.description?.substring(0,110)+ '...' : s?.description}
-                                </h3>
-                            </div>
-                        </div>
+                        <ImageCard s={s} sign={sign} position={'row'} func={()=>window.open(s.link)} />
                     </SwiperSlide>
                 ))}
             </Swiper>
