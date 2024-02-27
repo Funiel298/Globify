@@ -1,5 +1,4 @@
 'use client'
-import { CgMenuGridR } from "react-icons/cg";
 
 export default function Header(){
 
@@ -11,7 +10,7 @@ export default function Header(){
     ]
 
     return(
-        <div className="absolute z-10 left-[50%] flex flex-row justify-between w-1/2 text-white text-start p-10 text-4xl ">
+        <div className="absolute z-10 md:left-[50%] flex flex-row justify-between md:w-1/2 w-full flex-wrap text-white text-start p-10 text-4xl ">
             {links.map((link)=>(
                 <a className="text-lg" href={`/${link}`}>{link}</a>
             ))}

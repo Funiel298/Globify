@@ -1,45 +1,62 @@
-    [
-        {
+[
+    {
         "name": "Norway",
         "image": "https://www.alphatrad.co.uk/sites/alphatrad.co.uk/files/styles/news_image_amp/public/images/articles/interesting-facts-about-norway.jpg?itok=lqes7rYn",
         "description": "Known for its stunning fjords, vibrant cities, and high quality of life, Norway offers breathtaking natural landscapes and a rich cultural heritage.",
         "additional_info": [
             {
-            "description": "Norway, formally the Kingdom of Norway, is a Nordic country in Northern Europe, situated on the Scandinavian Peninsula. The remote Arctic island of Jan Mayen and the archipelago of Svalbard also form part of Norway. Bouvet Island, located in the Subantarctic, is a dependency.",
-            "images": [
-                {"image": "https://www.commonwealthfund.org/sites/default/files/styles/countries_hero_desktop/public/country_image_Norway.jpg?h=89acf671&itok=X9yMpO-u"},
-                {"image": "https://d31ezp3r8jwmks.cloudfront.net/jfeq9iyvrhtl0uqxjtjb2qekg04t"}
-            ]
+                "description": "Norway, formally the Kingdom of Norway, is a Nordic country in Northern Europe, situated on the Scandinavian Peninsula. The remote Arctic island of Jan Mayen and the archipelago of Svalbard also form part of Norway. Bouvet Island, located in the Subantarctic, is a dependency.",
+                "images": [
+                    {"image": "https://www.commonwealthfund.org/sites/default/files/styles/countries_hero_desktop/public/country_image_Norway.jpg?h=89acf671&itok=X9yMpO-u"},
+                    {"image": "https://d31ezp3r8jwmks.cloudfront.net/jfeq9iyvrhtl0uqxjtjb2qekg04t"}
+                ],
+                "population": "5.4 million",
+                "GDP": "434 billion USD",
+                "area": "148,729 sq km",
+                "capital": "Oslo",
+                "life_expectancy": "83 years",
+                "official_language": "Norwegian"
             }
         ]
-        },
-        {
+    },
+    {
         "name": "Finland",
         "image": "https://iworld.com/wp-content/uploads/2023/03/life-finland.jpg",
         "description": "Famous for its picturesque lakes, Northern Lights, and design culture, Finland is a land of innovation, saunas, and a strong emphasis on education.",
         "additional_info": [
             {
-            "description": "Finland, officially the Republic of Finland, is a country located in Northern Europe. With a population of approximately 5.5 million, Finland is one of the most sparsely populated countries in Europe.",
-            "images": [
-                {"image": "https://www.visitfinland.com/dam/jcr:6be00c01-1e28-45d0-a435-a5101d473132/Snowy%20trees%20in%20Salla%20National%20Park_%20Eeva%20M%C3%A4kinen_optimized.jpg"},
-                {"image": "https://www.ctvnews.ca/content/dam/ctvnews/en/images/2023/4/4/helsinki-cathedral-in-helsinki--finland-1-6341526-1680594631492.jpg"}
-            ]
+                "description": "Finland, officially the Republic of Finland, is a country located in Northern Europe. With a population of approximately 5.5 million, Finland is one of the most sparsely populated countries in Europe.",
+                "images": [
+                    {"image": "https://www.visitfinland.com/dam/jcr:6be00c01-1e28-45d0-a435-a5101d473132/Snowy%20trees%20in%20Salla%20National%20Park_%20Eeva%20M%C3%A4kinen_optimized.jpg"},
+                    {"image": "https://www.ctvnews.ca/content/dam/ctvnews/en/images/2023/4/4/helsinki-cathedral-in-helsinki--finland-1-6341526-1680594631492.jpg"}
+                ],
+                "population": "5.5 million",
+                "GDP": "270 billion USD",
+                "area": "338,424 sq km",
+                "capital": "Helsinki",
+                "life_expectancy": "82 years",
+                "official_language": "Finnish, Swedish"
             }
         ]
-        },
-        {
+    },
+    {
         "name": "Iceland",
         "image": "https://cdn.britannica.com/71/73371-050-9DFAEC1E/Reykjavik-Iceland.jpg",
         "description": "With its rugged landscapes, geothermal wonders, and Viking history, Iceland is a unique destination known for its dramatic scenery and outdoor adventures.",
         "additional_info": [
             {
-            "description": "Iceland, officially the Republic of Iceland, is a Nordic island country in the North Atlantic Ocean, with a population of over 364,000 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.",
-            "images": [
-                {"image": "https://i.natgeofe.com/n/7d59bf92-a500-4eab-81cb-997a38ce7403/iceland_NationalGeographic_2168279_3x4.jpg"},
-                {"image": "https://static.wixstatic.com/media/df9fb8_b455faa6090744308b70be18a4897ad0~mv2.jpg/v1/fill/w_640,h_456,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/df9fb8_b455faa6090744308b70be18a4897ad0~mv2.jpg"}
-            ]
+                "description": "Iceland, officially the Republic of Iceland, is a Nordic island country in the North Atlantic Ocean, with a population of over 364,000 and an area of 103,000 km2 (40,000 sq mi), making it the most sparsely populated country in Europe.",
+                "images": [
+                    {"image": "https://i.natgeofe.com/n/7d59bf92-a500-4eab-81cb-997a38ce7403/iceland_NationalGeographic_2168279_3x4.jpg"},
+                    {"image": "https://static.wixstatic.com/media/df9fb8_b455faa6090744308b70be18a4897ad0~mv2.jpg/v1/fill/w_640,h_456,al_c,q_80,usm_0.66_1.00_0.01,enc_auto/df9fb8_b455faa6090744308b70be18a4897ad0~mv2.jpg"}
+                ],
+                "population": "364,000",
+                "GDP": "24.65 billion USD",
+                "area": "103,000 sq km",
+                "capital": "Reykjavik",
+                "life_expectancy": "83 years",
+                "official_language": "Icelandic"
             }
         ]
-        }
-    ]
-    
+    }
+]

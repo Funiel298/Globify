@@ -99,25 +99,22 @@ export default function VerticalScroll({index, sign}: any){
         ]
     ]
     
+    const isMobile = (window.innerWidth < 1200)
+    const direction = isMobile ? 'horizontal' : 'vertical';
 
-
-    return(
-        <div className='absolute w-[35%] top-1/2 bg-[#212427] left-[66%] p-5 h-1/2  '>
+    return (
+        <div className='absolute lg:w-[35%] lg:top-1/2 bg-[#212427] lg:left-[66%] p-5 lg:h-1/2 h-1/3 w-full bottom-0 left-0'>
             <Swiper
-                scrollbar={{
-                    draggable: true,
-                    dragSize: 100
-                }}
-                direction={'vertical'}
+                direction={direction}
                 slidesPerView={1.5}
                 mousewheel={true}
                 spaceBetween={20}
                 modules={[Scrollbar, Mousewheel]}
-                className="h-[99%] "
+                className="h-full"
             >
-                {arr[index].map((s : any)=>(
-                    <SwiperSlide>
-                        <ImageCard s={s} sign={sign} position={'row'} func={()=>window.open(s.link)} />
+                {arr[index].map((s: any) => (
+                    <SwiperSlide key={s.link}>
+                        <ImageCard s={s} sign={sign} position={'row'} func={() => window.open(s.link)} />
                     </SwiperSlide>
                 ))}
             </Swiper>
