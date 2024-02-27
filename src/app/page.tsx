@@ -47,16 +47,17 @@ export default function Home() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-[12vw] font-bold m-0 p-0 flex items-center group"
+            onClick={openModal}
+            className="text-[12vw] font-bold m-0 p-0 flex items-center group underline"
           >
             {data[counter].name}
-            <IoMdArrowDropdown className='text-[5vw] mt-10 opacity-0 duration-300 group-hover:opacity-70 hover:!opacity-100' onClick={openModal} />
+            <IoMdArrowDropdown className='text-[5vw] mt-10 opacity-0 duration-300 group-hover:opacity-70 hover:!opacity-100  ' />
           </motion.h1>
           <motion.h6
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8 }}
-            className="w-1/2 p-3 sm:text-sm m-0" 
+            className="md:w-1/2 w-full p-3 sm:text-sm m-0" 
           >
             {data[counter].description}
           </motion.h6>
